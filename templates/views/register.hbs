@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    {{>navbar}}
+   
+    <div class="body-content">
+        <div class="module">
+            <h1>Create an account</h1>
+            <form class="form" action="/register" method="POST" autocomplete="off">
+                <div class="alert alert-error"></div>
+                <input type="text" placeholder="First Name" name="firstname" required />
+                <input type="text" placeholder="Last Name" name="lastname" required />
+                <input type="email" placeholder="Email" name="email" required />
+                <input type="text" placeholder="Phone Number" name="phone" required />
+
+                <label class="radio inline">
+                    <input type="radio" name="gender" value="male" checked>
+                    <span> Male </span>
+                </label>
+                <label class="radio inline">
+                    <input type="radio" name="gender" value="female">
+                    <span> Female </span>
+                </label>
+
+                <input type="text" placeholder="Enter your age" name="age" required />
+
+                <input type="password" placeholder="Password" name="password" autocomplete="new-password" required />
+                <input type="password" placeholder="Confirm Password" name="confirmpassword" autocomplete="new-password" required />
+     
+                <input type="submit" value="Register" class="btn btn-block btn-primary" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
